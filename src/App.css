@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1920px; /* Largura máxima para centralizar em telas Full HD */
+  margin: 0 auto; /* Centralizar o conteúdo horizontalmente */
+}
+
+.header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  background: linear-gradient(45deg, #b394e0, #e87799);
+  color: white;
+  height: 800px;
+}
+
+.textos {
+  min-width: 350px;
+  max-width: 400px;
+  margin-bottom: 50px;
+
+}
+
+.header_title {
+  font-size: 48px;
+  margin: 0;
+  margin-bottom: 10px;
+  letter-spacing: 2px; /* Espaçamento entre as letras */
+}
+
+.header_description {
+  font-size: 18px;
+  width: 70%;
+  margin: 0 auto; /* Centralizar a descrição */
+  opacity: 0.8; /* Reduzir a opacidade para um estilo mais sutil */
+  color: #4b0082; /* Índigo */
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Aumentar o tamanho mínimo para ajustar melhor em telas maiores */
+  gap: 20px;
+  padding: 20px;
+  max-width: 80%;
+  margin: 0 auto; 
+}
+
+.card {
+  flex: 1; /* Ocupar espaço disponível na largura */
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  min-width: 350px;
+  max-width: 350px; /* Limitar a largura máxima do card para evitar esticamentos em telas grandes */
+  margin: 0 auto; /* Centralizar o card horizontalmente */
+}
+
+.card_img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  display: block;
+}
+
+.card_name {
+  font-size: 24px;
+  margin: 0;
+  margin-bottom: 5px;
+  color: #333333;
+}
+
+.card_description {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Estilos gerais para o formulário */
+.meu-formulario {
+  max-width: 400px;
+  min-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form_title {
+  color: #8A2BE2;
+}
+
+/* Estilos para os rótulos */
+.form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #8A2BE2;
+  text-align: left;
+  margin-top: 15px;
+}
+
+/* Estilos para os campos de entrada */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #8A2BE2;
+  border-radius: 4px;
+  transition: border-color 0.2s ease-in-out;
+}
+
+/* Estilos para os campos de entrada quando em foco */
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #8A2BE2;
+  box-shadow: 0px 0px 4px rgba(138, 43, 226, 0.4);
+}
+
+/* Estilos para o botão de envio */
+button {
+  padding: 10px 16px;
+  font-size: 16px;
+  background-color: #8A2BE2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-top: 20px;
+}
+
+/* Estilos para o botão de envio quando em foco ou hover */
+button:focus,
+button:hover {
+  outline: none;
+  background-color: #6A1CA8;
+}
+
+.footer {
+  text-align: center;
+  background-color: #8A2BE2;
+  color: #fff;
+  padding: 10px;
+}
+
+.tooltip {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 16px;
+  background-color: #8A2BE2;
+  color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tooltip::before {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent #8A2BE2 transparent;
+}
+
+.tooltip.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+
+
